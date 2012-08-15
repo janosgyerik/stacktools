@@ -10,19 +10,30 @@ sys.path.append('.')
 import optparse
 
 from stacktools.sites import find_site, print_site, print_sites
+from stacktools.badges import print_badges
 
 if __name__ == '__main__':
     parser = optparse.OptionParser()
     parser.set_usage('%prog [options]')
     parser.set_description('list, find, print StackExchange sites')
     parser.add_option('--list', '-l', dest='op_list', action='store_true')
+    parser.add_option('--badges', '-b', dest='op_badges', action='store_true')
+    parser.add_option('--site', '-s', dest='site_keyword')
 
     (options, args) = parser.parse_args()
+
+    if options.site_keyword:
+        site = find_site(options.site_keyword)
+    else:
+        site = None
 
     if options.op_list:
         print_sites()
     else:
-        for keyword in args:
-            print_site(find_site(keyword))
+        if site:
+            if options.op_badges:
+                print_badges(site.get_site())
+            else:
+                print_site(site)
 
 # eof
