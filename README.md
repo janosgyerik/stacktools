@@ -14,14 +14,14 @@ Setup
 
 Command Line Interface
 ----------------------
-All the scripts ./scripts/\* have useful help with -h or --help
+All the scripts ./scripts/\* have useful help with `-h` or `--help`
 
 
 Examples
 --------
 - Print the list of sites
 
-        $ ./scripts/sites.py | headsites
+        $ ./scripts/sites.py | head
         Stack Overflow - http://stackoverflow.com
         Server Fault - http://serverfault.com
         Super User - http://superuser.com
