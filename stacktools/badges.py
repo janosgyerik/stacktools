@@ -1,5 +1,6 @@
 def print_badge(badge):
-    print '%6d %s: %s' % (badge.award_count, badge.name, badge.description)
+    print(dir(badge))
+    print('%6d %s: %s' % (badge.award_count, badge.name, badge.description))
 
 
 def print_badges(site, limit=0):
