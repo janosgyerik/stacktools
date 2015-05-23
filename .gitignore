@@ -2,3 +2,9 @@
 
 # PyCharm
 .idea
+
+# project
+virtualenv
+
+# misc
+tmp
