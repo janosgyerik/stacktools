@@ -9,7 +9,7 @@ Setup
 -----
 1. Install required python modules
 
-        pip install -r pip.txt
+        pip install -r requirements.txt
 
 
 Command Line Interface
